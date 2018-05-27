@@ -1,29 +1,63 @@
-# Marlin 3D Printer Firmware for my modified Anycubic i3 BQ_ZUM_MEGA_3D
+# Marlin 3D Printer Firmware for my modified Anycubic i3 Mega
+
+**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
+
+**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
+
+**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
+
+**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
+
+**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
+
+**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
+
+**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
+
+**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
+
+**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
+
+**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
+
+**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
+
 
 # My hardware
 
-  - Base mechanics: Anycubic i3 Mega version 4
-  - Board: MKS Gen 1.4
-  - Stepper Drivers: TMC 2130
+  - **Printer** Anycubic i3 Mega version 4
+    - Is a Prusa i3-like machine with Dual Z motors (second Z attached to E1) and Dual Z endstops (second one attached to Xmax endstop on the board)
+  - **Board** MKS Gen 1.4
+  - **Stepper Drivers** TMC 2130 - Fysetc version 1.0, two of them modded to work with SPI
 
 ## Wiring notes
 
+### MKS Gen 1.4
+
+  - All motor jumpers are taken off
+
 ### Stock Hardware
-  - Z2 motor is connected to E1
-  - Z2 endstop is connected to X+
-  
+  - Second Z motor
+    - Z2 motor is connected to E1
+    - Z2 endstop is connected to X max
 
-### TMC2130
+### TMC2130's
 
+  - Z, E0 and E1 drivers are in "dumb mode"
+
+  - X and Y drivers are in SPI mode.
+
+    - X CS is pin 42
+    - Y CS is pin 44
 
 
 # Thank you / Important Links
 
   - Tomas Sanladerer: https://www.youtube.com/watch?v=sPvTB3irCxQ
 
-  - oakdesign and slippyr4 on Toms3D forum: https://discuss.toms3d.org/hardware-f6/be-aware-with-chinese-fysetc-tmc2130-t384.html
+  - This 3D Campy article: http://www.3dcampy.com/2017/12/20/tutorial-instalacion-y-configuracion-driver-trinamic-tmc2130-en-ramps-y-mks-gen-1-4/
 
- - Marlin documentation: http://marlinfw.org/docs/features/tmc_drivers.html
+ - Marlin documentation notes about the TMC2130 board I just bought by mistake: http://marlinfw.org/docs/features/tmc_drivers.html
 
 ## License
 

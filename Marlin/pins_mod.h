@@ -9,19 +9,8 @@ Wiring that I made on my MKS Gen 1.3
 
 #define X_CS_PIN           42
 #define Y_CS_PIN           44
-#define Z_CS_PIN            4
-#define E0_CS_PIN           5
-#define E1_CS_PIN           6
 
 // Sanity checks to be sure chosen pins aren't used for something else
-
-#undef SERVO3_PIN
-#undef SERVO2_PIN
-#undef SERVO1_PIN
-
-#undef FIL_RUNOUT_PIN
-#undef FILWIDTH_PIN
-
 
 // Free Pin 42
 #undef Z_SERIAL_RX_PIN
@@ -61,3 +50,14 @@ Wiring that I made on my MKS Gen 1.3
   #define LCD_PINS_ENABLE    -1
   #define LCD_PINS_D6        -1
 #endif
+
+
+// Make the rest is working...
+
+// Heatbed
+#define HEATER_BED_PIN 8 // PWM
+// Extruder Cooling Fan
+#define FAN1_PIN 7 // PWM
+#define FAN2_PIN 10 // PWM
+// Part Cooling Fan
+#define FAN_PIN 9 // PWM
