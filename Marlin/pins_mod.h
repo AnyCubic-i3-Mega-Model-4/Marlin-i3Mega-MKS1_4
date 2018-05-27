@@ -5,10 +5,15 @@ Wiring that I made on my MKS Gen 1.3
 */
 
 
+#include "pins_MKS_13.h"
+
 // Define the CS Pins
 
 #define X_CS_PIN           42
 #define Y_CS_PIN           44
+#define Z_CS_PIN           -1
+#define E0_CS_PIN          -1
+#define E1_CS_PIN          -1
 
 // Sanity checks to be sure chosen pins aren't used for something else
 
@@ -52,7 +57,14 @@ Wiring that I made on my MKS Gen 1.3
 #endif
 
 
-// Make the rest is working...
+// Make sure the rest is working...
+
+// Servos
+#define SERVO0_PIN 11
+#define SERVO1_PIN  6
+#define SERVO2_PIN  5
+#define SERVO3_PIN  4
+
 
 // Heatbed
 #define HEATER_BED_PIN 8 // PWM
