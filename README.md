@@ -30,7 +30,7 @@
   - **Board** MKS Gen 1.4
   - **Stepper Drivers** TMC 2130 - Fysetc version 1.0, two of them modded to work with SPI
 
-## Wiring notes
+# Wiring notes
 
 ### MKS Gen 1.4
 
