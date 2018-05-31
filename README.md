@@ -26,7 +26,7 @@
 # My hardware
 
   - **Printer** Anycubic i3 Mega version 4
-    - Is a Prusa i3-like machine with Dual Z motors (second Z attached to E1) and Dual Z endstops (second one attached to Xmax endstop on the board)
+    - Is a Prusa i3-like machine with Dual Z motors (second Z attached to E1) and Dual Z endstops (second one attached to X+ endstop on the board)
   - **Board** MKS Gen 1.4 (Arduino Mega and RAMPS 1.4 based)
   - **Stepper Drivers** 5 x TMC 2130 - Fysetc version 1.0, two of them modded to work with SPI (more bellow)
 
