@@ -27,28 +27,31 @@
 
   - **Printer** Anycubic i3 Mega version 4
     - Is a Prusa i3-like machine with Dual Z motors (second Z attached to E1) and Dual Z endstops (second one attached to Xmax endstop on the board)
-  - **Board** MKS Gen 1.4
-  - **Stepper Drivers** TMC 2130 - Fysetc version 1.0, two of them modded to work with SPI
+  - **Board** MKS Gen 1.4 (Arduino Mega and RAMPS 1.4 based)
+  - **Stepper Drivers** 5 x TMC 2130 - Fysetc version 1.0, two of them modded to work with SPI (more bellow)
 
-# Wiring notes
+# Set up notes
 
-### MKS Gen 1.4
+## MKS Gen 1.4
 
   - All motor jumpers are taken off
 
-### Stock Hardware
+## Stock Hardware
   - Second Z motor
-    - Z2 motor is connected to E1
-    - Z2 endstop is connected to X max
+    - Z2 motor is connected to E1 on the board
+    - Z2 endstop is connected to X max on the board
 
-### TMC2130's
+## TMC2130's
 
-  - Z, E0 and E1 drivers are in "dumb mode"
+  - Z, E0 and E1 drivers are in "dumb mode" (unmodified Fysetc TMC2130 version 1.0 boards)
 
-  - X and Y drivers are in SPI mode.
+  - X and Y drivers are in SPI mode (modified Fysetc TMC2130 version 1.0 boards)
 
+    - Read Fysetc_mod.md for documentation about what I made
     - X CS is pin 42
     - Y CS is pin 44
+
+
 
 
 # Thank you / Important Links
