@@ -1,19 +1,11 @@
 /*
 
-Wiring that I made on my MKS Gen 1.3
+Wiring that I made on my MKS Gen 1.4
 
 */
 
-
+// Inherit everything
 #include "pins_MKS_13.h"
-
-// Define the CS Pins
-
-#define X_CS_PIN           42
-#define Y_CS_PIN           44
-#define Z_CS_PIN           -1
-#define E0_CS_PIN          -1
-#define E1_CS_PIN          -1
 
 // Sanity checks to be sure chosen pins aren't used for something else
 
@@ -32,47 +24,56 @@ Wiring that I made on my MKS Gen 1.3
 
 #if ENABLED(ULTRA_LCD)
   #if ENABLED(NEWPANEL) && ENABLED(PANEL_ONE)
-    #define LCD_PINS_ENABLE     -1
-    #define LCD_PINS_D6         -1
+    #define LCD_PINS_ENABLE -1
+    #define LCD_PINS_D6 -1
   #endif
   #if ENABLED(NEWPANEL)
     #if ENABLED(REPRAPWORLD_GRAPHICAL_LCD)
-      #define SD_DETECT_PIN     -1
+      #define SD_DETECT_PIN -1
     #elif ENABLED(VIKI2) || ENABLED(miniVIKI)
-      #define DOGLCD_A0         -1
+      #define DOGLCD_A0 -1
     #elif ENABLED(MINIPANEL)
-      #define BEEPER_PIN        -1
-      #define DOGLCD_A0         -1
+      #define BEEPER_PIN -1
+      #define DOGLCD_A0 -1
     #else
       #if ENABLED(REPRAPWORLD_KEYPAD)
-        #define SHIFT_CLK       -1
-        #define SHIFT_LD        -1
+        #define SHIFT_CLK -1
+        #define SHIFT_LD -1
       #endif
     #endif
   #endif
 #endif
 #if ENABLED(ZONESTAR_LCD)
-  #define LCD_PINS_ENABLE    -1
-  #define LCD_PINS_D6        -1
+  #define LCD_PINS_ENABLE -1
+  #define LCD_PINS_D6 -1
 #endif
+
+
+// Define the CS Pins of the TMC's
+
+#define X_CS_PIN 42
+#define Y_CS_PIN 44
+#define Z_CS_PIN -1
+#define E0_CS_PIN -1
+#define E1_CS_PIN -1
+
 
 // Make sure the rest is working...
 
 // Servos
-#define SERVO0_PIN 11
-#define SERVO1_PIN  6
-#define SERVO2_PIN  5
-#define SERVO3_PIN  4
-
+#define SERVO0_PIN  11
+#define SERVO1_PIN   6
+#define SERVO2_PIN   5
+#define SERVO3_PIN  -1 // used by the controller fan now
 
 // Power Outputs
 
-#define MY_HOTEND_FAN        7
-#define MY_HOTEND_HEATER    10
-#define MY_PART_COOLING_FAN  9
-#define MY_HEATBED           8
+#define MY_HOTEND_FAN            7
+#define MY_HOTEND_HEATER        10
+#define MY_PART_COOLING_FAN      9
+#define MY_HEATBED               8
 
-#define HEATER_BED_PIN MY_HEATBED
-#define HEATER_0_PIN MY_HOTEND_HEATER
-#define FAN_PIN MY_PART_COOLING_FAN
-#define FAN1_PIN MY_HOTEND_FAN
+#define HEATER_BED_PIN  MY_HEATBED
+#define HEATER_0_PIN    MY_HOTEND_HEATER
+#define FAN_PIN         MY_PART_COOLING_FAN
+#define FAN1_PIN        MY_HOTEND_FAN
