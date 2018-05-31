@@ -478,7 +478,7 @@
 #define USE_XMIN_PLUG
 #define USE_YMIN_PLUG
 #define USE_ZMIN_PLUG
-#define USE_XMAX_PLUG // TODO: connect Z2 endstop to XMAX
+#define USE_XMAX_PLUG
 //#define USE_YMAX_PLUG
 //#define USE_ZMAX_PLUG
 
@@ -549,7 +549,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
- #define DEFAULT_MAX_ACCELERATION      {1000, 1000, 200, 5000}  // (mm/sec^2) max acceleration (M201) // TODO: max acceleration, copyied from Prusa i3 MK3
+ #define DEFAULT_MAX_ACCELERATION      {3000,3000,200,1000}  // (mm/sec^2) max acceleration (M201) // TODO: max acceleration, copyied from Prusa i3 MK3
 
 /**
  * Default Acceleration (change/s) change = mm/s
