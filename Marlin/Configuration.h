@@ -460,7 +460,7 @@
 // Uncomment one of these options to enable CoreXY, CoreXZ, or CoreYZ kinematics
 // either in the usual order or reversed
 //#define COREXY
-//#define COREXZ
+#define COREXZ
 //#define COREYZ
 //#define COREYX
 //#define COREZX
@@ -502,12 +502,12 @@
 #define Z_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 #define X_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
-#define Z_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
-//#define Z_MIN_PROBE_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
+#define Z_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 
 // Enable this feature if all enabled endstop pins are interrupt-capable.
 // This will remove the need to poll the interrupt pins, saving many CPU cycles.
-//#define ENDSTOP_INTERRUPTS_FEATURE
+//#define ENDSTOP_INTERRUPTS_FEATURE // TODO: check this
 
 //=============================================================================
 //============================== Movement Settings ============================
@@ -541,7 +541,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 12, 45} // TODO: max feedrate
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 6, 60} // TODO: max feedrate
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -549,7 +549,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
- #define DEFAULT_MAX_ACCELERATION      {3000,3000,200,1000}  // (mm/sec^2) max acceleration (M201) // TODO: max acceleration, copyied from Prusa i3 MK3
+ #define DEFAULT_MAX_ACCELERATION      {3000,3000,60,10000}  // (mm/sec^2) max acceleration (M201) // TODO: max acceleration, copyied from Prusa i3 MK3
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -591,7 +591,7 @@
  #define DEFAULT_XJERK                 10.0
  #define DEFAULT_YJERK                 10.0
  #define DEFAULT_ZJERK                  0.4
- #define DEFAULT_EJERK                  5.0
+ #define DEFAULT_EJERK                  0.01
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -642,7 +642,7 @@
  * Use G29 repeatedly, adjusting the Z height at each point with movement commands
  * or (with LCD_BED_LEVELING) the LCD controller.
  */
-//#define PROBE_MANUALLY
+#define PROBE_MANUALLY
 
 /**
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
