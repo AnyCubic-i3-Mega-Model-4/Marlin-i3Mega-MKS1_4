@@ -51,14 +51,14 @@ Wiring that I made on my MKS Gen 1.4
 
 // Define the CS Pins of the TMC's
 
-#define X_CS_PIN 42
-#define Y_CS_PIN 44
-#define Z_CS_PIN -1
-#define E0_CS_PIN -1
-#define E1_CS_PIN -1
+#define X_CS_PIN  42
+#define Y_CS_PIN  44
+#define Z_CS_PIN  -1 // dumb
+#define E0_CS_PIN -1 // dumb
+#define E1_CS_PIN -1 // dumb
 
 
-// Make sure the rest is working...
+// Make sure the rest is properly configured
 
 // Servos
 #define SERVO0_PIN  11
@@ -72,8 +72,21 @@ Wiring that I made on my MKS Gen 1.4
 #define MY_HOTEND_HEATER        10
 #define MY_PART_COOLING_FAN      9
 #define MY_HEATBED               8
+#define MY_CONTROLLER_FAN        4
 
 #define HEATER_BED_PIN  MY_HEATBED
 #define HEATER_0_PIN    MY_HOTEND_HEATER
 #define FAN_PIN         MY_PART_COOLING_FAN
 #define FAN1_PIN        MY_HOTEND_FAN
+
+
+// Redefine limit Switches
+
+// interrupt capable pins 2, 3, 18, 19, 20, 21
+#define X_MIN_PIN           3 // IC
+#define X_MAX_PIN           2 // IC
+#define Y_MIN_PIN          19 // IC // 14 // NOT IC
+#define Y_MAX_PIN          15 // not used NOT IC
+#define Z_MIN_PIN          18 // IC
+#define Z_MAX_PIN          14 // NOT USED // 19 // not used IC
+// Note swapped Y- and Z+
