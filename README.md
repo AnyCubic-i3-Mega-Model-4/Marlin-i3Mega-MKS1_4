@@ -37,13 +37,13 @@
   - All motor jumpers are taken off
 
 ## Stock Hardware
-  - Second Z motor
+  - Second Z motor as stock
     - Z2 motor is connected to E1 on the board
-    - Z2 endstop is connected to X max on the board
+
 
 ## TMC2130's
 
-  - Z, E0 and E1 drivers are in "dumb mode" (unmodified Fysetc TMC2130 version 1.0 boards)
+  - Z, E0 and E1 drivers are in "dumb mode" (**un**-modified Fysetc TMC2130 version 1.0 boards)
 
   - X and Y drivers are in SPI mode (modified Fysetc TMC2130 version 1.0 boards)
 
@@ -51,6 +51,14 @@
     - X CS is pin 42
     - Y CS is pin 44
 
+## Wiring kinks
+
+  - X endstop connected to Xmin on the board, as usual
+  - Z1 endstop is connected to Zmin on the board, as usual
+  - Z2 endstop is connected to Xmax on the board
+  - Y endstop is connected to Zmax on the board (so all endstops are connected to interrupt capable pins)
+
+  - Last "servo pin" (D4) on the board is can be connected to the PWM signal of a 5V PWM fan.
 
 
 
