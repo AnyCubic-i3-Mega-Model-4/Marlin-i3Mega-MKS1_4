@@ -36,6 +36,8 @@
   - Hotend fan is connected to E1 heater
   - Hotbed is connecto normally.
 
+  **Important**: you are on your own to wire the rest.
+
 ## Before you flash
 
   - Modify Configuration.h at least in the following items: language (if you don't want Portuguese) and UUID.
@@ -46,6 +48,10 @@
   - Tomas Sanladerer: https://www.youtube.com/watch?v=sPvTB3irCxQ
 
   - This 3D Campy article: http://www.3dcampy.com/2017/12/20/tutorial-instalacion-y-configuracion-driver-trinamic-tmc2130-en-ramps-y-mks-gen-1-4/
+
+# Warranty
+
+  There's none, you are own your own, good luck.
 
 ## License
 
