@@ -19,7 +19,6 @@
   - Second Z motor as stock
     - Z2 motor is connected to E1 on the board
 
-
 ## TMC2130's
 
   - Z, E0 and E1 drivers are in "dumb mode" (**un**-modified Fysetc TMC2130 version 1.0 boards)
@@ -47,8 +46,6 @@
   - Tomas Sanladerer: https://www.youtube.com/watch?v=sPvTB3irCxQ
 
   - This 3D Campy article: http://www.3dcampy.com/2017/12/20/tutorial-instalacion-y-configuracion-driver-trinamic-tmc2130-en-ramps-y-mks-gen-1-4/
-
- - Marlin documentation notes about the TMC2130 board I just bought by mistake: http://marlinfw.org/docs/features/tmc_drivers.html
 
 ## License
 
