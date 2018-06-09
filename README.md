@@ -1,34 +1,13 @@
 # Marlin 3D Printer Firmware for my modified Anycubic i3 Mega
 
-**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
-
-**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
-
-**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
-
-**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
-
-**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
-
-**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
-
-**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
-
-**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
-
-**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
-
-**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
-
-**NOTE**: THIS STILL DOESN'T WORK, COME BACK LATER
 
 
 # My hardware
 
   - **Printer** Anycubic i3 Mega version 4
     - Is a Prusa i3-like machine with Dual Z motors (second Z attached to E1) and Dual Z endstops (second one attached to X+ endstop on the board)
-  - **Board** MKS Gen 1.4 (Arduino Mega and RAMPS 1.4 based)
-  - **Stepper Drivers** 5 x TMC 2130 - Fysetc version 1.0, two of them modded to work with SPI (more bellow)
+  - **Board** MKS Gen 1.4 (Arduino Mega and RAMPS 1.4 based) with the RepRap Discount-like LCD
+  - **Stepper Drivers** 5 x TMC 2130
 
 # Set up notes
 
@@ -45,21 +24,22 @@
 
   - Z, E0 and E1 drivers are in "dumb mode" (**un**-modified Fysetc TMC2130 version 1.0 boards)
 
-  - X and Y drivers are in SPI mode (modified Fysetc TMC2130 version 1.0 boards)
-
-    - Read Fysetc_mod.md for documentation about what I made
-    - X CS is pin 42
-    - Y CS is pin 44
+  - X and Y drivers are in SPI mode (not if you got the Fysetc version 1.0, you'll need to modify them, see this page to know how): http://marlinfw.org/docs/features/tmc_drivers.html
 
 ## Wiring kinks
 
   - X endstop connected to Xmin on the board, as usual
   - Z1 endstop is connected to Zmin on the board, as usual
   - Z2 endstop is connected to Xmax on the board
-  - Y endstop is connected to Zmax on the board (so all endstops are connected to interrupt capable pins)
+  - Y endstop is connected to Ymin on the board, as usual
 
-  - Last "servo pin" (D4) on the board is can be connected to the PWM signal of a 5V PWM fan.
+  - Hotend is connected normally.
+  - Hotend fan is connected to E1 heater
+  - Hotbed is connecto normally.
 
+## Before you flash
+
+  - Modify Configuration.h at least in the following items: language (if you don't want Portuguese) and UUID.
 
 
 # Thank you / Important Links
